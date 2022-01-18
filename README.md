@@ -12,3 +12,6 @@ page inventaire = vetements a collectionner, et equipper
 
 page parametre = changer la ville, augmenter la taille de la police, desactiver les conseils
 
+# equipe
+
+Florent Weltmann
