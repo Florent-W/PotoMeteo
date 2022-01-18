@@ -15,3 +15,5 @@ page parametre = changer la ville, augmenter la taille de la police, desactiver 
 # equipe
 
 Florent Weltmann
+
+Pablo Perez
