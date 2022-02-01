@@ -57,7 +57,7 @@ public class Search {
             e.printStackTrace();
         }
     }
-
+/*
     public List<City> search(String str) {
         List<City> result = new ArrayList<>();
         if (str.length() > 0) {
@@ -89,5 +89,5 @@ public class Search {
             }
         }
         return result;
-    }
+    } */
 }
