@@ -31,7 +31,11 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 Intent intent = new Intent(StartActivity.this, HomeActivity.class);
-                intent.putExtra("SelectedCity", parent.getAdapter().getItem(position).toString());
+                City c = (City) parent.getAdapter().getItem(position);
+                intent.putExtra("name", c.getName());
+                intent.putExtra("country", c.getCountry());
+                intent.putExtra("lat", c.getLat());
+                intent.putExtra("lon", c.getLon());
                 startActivity(intent);
             }
         });
