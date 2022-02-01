@@ -16,15 +16,15 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        mListView = (ListView) findViewById(R.id.listView);
+        mListView = findViewById(R.id.listView);
 
-        Ville Paris = new Ville(1,"Paris", "France");
-        Ville Marseille = new Ville(2,"Marseille", "France");
-        Ville Lyon = new Ville(3,"Lyon", "France");
+        City Paris = new City("1","Paris", "France");
+        City Marseille = new City("2","Marseille", "France");
+        City Lyon = new City("3","Lyon", "France");
 
-        Ville[] Villes = new Ville[]{Paris, Marseille, Lyon};
+        City[] Citys = new City[]{Paris, Marseille, Lyon};
 
-        ArrayAdapter<Ville> adapter = new ArrayAdapter<Ville>(StartActivity.this, android.R.layout.simple_list_item_1, Villes);
+        ArrayAdapter<City> adapter = new ArrayAdapter<>(StartActivity.this, android.R.layout.simple_list_item_1, Citys);
         mListView.setAdapter(adapter);
     }
 }

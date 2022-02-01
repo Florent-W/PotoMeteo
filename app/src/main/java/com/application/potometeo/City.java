@@ -1,10 +1,14 @@
 package com.application.potometeo;
 
-public class City {
+import java.io.Serializable;
 
-    private String id, name, country;
+public class City implements Serializable {
 
-    public City(String id, String name, String country) {
+    private String id;
+    private String name;
+    private String country;
+
+    public City(String id, String name, String country)  {
         this.id = id;
         this.name = name;
         this.country = country;
@@ -21,4 +25,10 @@ public class City {
     public String getCountry() {
         return country;
     }
+
+    @Override
+    public String toString() {
+        return this.id + this.name +" ("+ this.country+")";
+    }
 }
+
