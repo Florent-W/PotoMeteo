@@ -25,7 +25,7 @@ public class HomeActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null){
             ville = extras.getString("name");
-            ville += extras.getString("country");
+            ville = ville + " " + extras.getString("country");
         }
 
         Log.d("TAG", "onCreate: Ville = "+extras);
