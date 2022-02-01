@@ -33,10 +33,10 @@ public class HomeActivity extends AppCompatActivity {
         tv2.setText(ville);
 
 
-        if (temperature<10){
+        if (Integer.parseInt(var)<10){
             ll.setBackgroundResource(R.drawable.cold);
         }
-        else if (temperature>25){
+        else if (Integer.parseInt(var)>25){
             ll.setBackgroundResource(R.drawable.hot);
         }
         else{
