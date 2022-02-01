@@ -14,6 +14,7 @@ import java.io.File;
 public class HomeActivity extends AppCompatActivity {
     int temperature;
     String var;
+    String ville;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +22,13 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         temperature = 0;
         var = "0";
+        ville = "Paris";
         Integer.parseInt(var);
         ConstraintLayout ll = findViewById(R.id.ActivityHome);
         TextView tv1 = (TextView)findViewById(R.id.temptextView);
         tv1.setText(var+"°C");
+        TextView tv2 = (TextView)findViewById(R.id.nomVille);
+        tv2.setText(ville);
 
 
         if (temperature<10){
