@@ -12,7 +12,6 @@ import android.widget.TextView;
 import java.io.File;
 
 public class HomeActivity extends AppCompatActivity {
-    int temperature;
     String var;
     String ville;
 
@@ -20,7 +19,6 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        temperature = 0;
         var = "0";
         ville = "Random Ville";
         Bundle extras = getIntent().getExtras();
