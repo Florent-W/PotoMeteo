@@ -22,7 +22,11 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         temperature = 0;
         var = "0";
-        ville = "Paris";
+        ville = "Random Ville";
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            ville = extras.getString("SelectedCity");
+        }
         Integer.parseInt(var);
         ConstraintLayout ll = findViewById(R.id.ActivityHome);
         TextView tv1 = (TextView)findViewById(R.id.temptextView);
