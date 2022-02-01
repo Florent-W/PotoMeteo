@@ -1,8 +1,13 @@
 package com.application.potometeo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -18,13 +23,17 @@ public class StartActivity extends AppCompatActivity {
 
         mListView = findViewById(R.id.listView);
 
-        City Paris = new City("1","Paris", "France");
-        City Marseille = new City("2","Marseille", "France");
-        City Lyon = new City("3","Lyon", "France");
+        ArrayAdapter<City> adapter = new ArrayAdapter<>(StartActivity.this, android.R.layout.simple_list_item_1, MainActivity.cities);
 
-        City[] Citys = new City[]{Paris, Marseille, Lyon};
-
-        ArrayAdapter<City> adapter = new ArrayAdapter<>(StartActivity.this, android.R.layout.simple_list_item_1, Citys);
         mListView.setAdapter(adapter);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                Intent intent = new Intent(StartActivity.this, HomeActivity.class);
+                intent.putExtra("SelectedCity", position);
+                startActivity(intent);
+            }
+        });
     }
 }
