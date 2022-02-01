@@ -31,7 +31,7 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 Intent intent = new Intent(StartActivity.this, HomeActivity.class);
-                intent.putExtra("SelectedCity", position);
+                intent.putExtra("SelectedCity", parent.getAdapter().getItem(position).toString());
                 startActivity(intent);
             }
         });
