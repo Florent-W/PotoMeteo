@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.io.File;
 
@@ -19,8 +20,12 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         temperature = 0;
+        var = "0";
         Integer.parseInt(var);
         ConstraintLayout ll = findViewById(R.id.ActivityHome);
+        TextView tv1 = (TextView)findViewById(R.id.temptextView);
+        tv1.setText(var+"°C");
+
 
         if (temperature<10){
             ll.setBackgroundResource(R.drawable.cold);
