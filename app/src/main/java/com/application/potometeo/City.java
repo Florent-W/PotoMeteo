@@ -7,11 +7,15 @@ public class City implements Serializable {
     private String id;
     private String name;
     private String country;
+    private String lat;
+    private String lon;
 
-    public City(String id, String name, String country)  {
+    public City(String id, String name, String country, String lat, String lon)  {
         this.id = id;
         this.name = name;
         this.country = country;
+        this.lat = lat;
+        this.lon = lon;
     }
 
     public String getId() {
@@ -26,9 +30,17 @@ public class City implements Serializable {
         return country;
     }
 
+    public String getLat() {
+        return lat;
+    }
+
+    public String getLon() {
+        return lon;
+    }
+
     @Override
     public String toString() {
-        return this.id + this.name +" ("+ this.country+")";
+        return this.name;
     }
 }
 
