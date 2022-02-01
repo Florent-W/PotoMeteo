@@ -5,6 +5,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -23,8 +24,9 @@ public class HomeActivity extends AppCompatActivity {
         ville = "Random Ville";
         Bundle extras = getIntent().getExtras();
         if (extras != null){
-            ville = extras.getString("SelectedCity");
+            ville = extras.getString("name");
         }
+        Log.d("TAG", "onCreate: Ville = "+extras);
         Integer.parseInt(var);
         ConstraintLayout ll = findViewById(R.id.ActivityHome);
         TextView tv1 = (TextView)findViewById(R.id.temptextView);
