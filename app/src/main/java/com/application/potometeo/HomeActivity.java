@@ -13,16 +13,14 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
     }
+
     public void ParamClicked(View view) {
-
-        Intent intent1 = new Intent(this, Bidon.class);
+        Intent intent1 = new Intent(this, Temp.class);
         startActivity(intent1);
-
     }
+
     public void InventoryClicked(View view) {
-
-        Intent intent2 = new Intent(this, Bidon.class);
+        Intent intent2 = new Intent(this, Temp.class);
         startActivity(intent2);
-
     }
 }

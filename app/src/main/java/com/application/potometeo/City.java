@@ -10,7 +10,7 @@ public class City implements Serializable {
     private String lat;
     private String lon;
 
-    public City(String id, String name, String country, String lat, String lon)  {
+    public City(String id, String name, String country, String lat, String lon) {
         this.id = id;
         this.name = name;
         this.country = country;

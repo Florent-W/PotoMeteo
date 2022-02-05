@@ -11,9 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PotoMeteo">
-        <activity android:name=".RequestTest"></activity>
         <activity
-            android:name=".Bidon"
+            android:name=".Temp"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"

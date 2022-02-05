@@ -1,7 +1,9 @@
 package com.application.potometeo;
 
 import android.util.Log;
+
 import java.io.IOException;
+
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
