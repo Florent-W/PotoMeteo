@@ -15,12 +15,12 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void ParamClicked(View view) {
-        Intent intent1 = new Intent(this, Temp.class);
+        Intent intent1 = new Intent(this, SettingsActivity.class);
         startActivity(intent1);
     }
 
     public void InventoryClicked(View view) {
-        Intent intent2 = new Intent(this, Temp.class);
+        Intent intent2 = new Intent(this, InventoryActivity.class);
         startActivity(intent2);
     }
 }

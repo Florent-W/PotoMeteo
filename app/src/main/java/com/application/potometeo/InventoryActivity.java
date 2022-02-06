@@ -35,20 +35,10 @@ public class InventoryActivity extends AppCompatActivity {
         Display Poto_Violet = new Display("Poto Violet", "violet", "Oui");
         Display Poto_Jaune = new Display("Poto Jaune", "jaune", "Oui");
         Display Poto_Vert = new Display("Poto Vert", "vert", "Oui");
-        Display Poto_Rose = new Display("Poto Violet", "vert", "Oui");
-        Display Poto_Noir = new Display("Poto Violet", "vert", "Oui");
-        Display Poto_Blanc = new Display("Poto Violet", "vert", "Oui");
-        Display Poto_Marron = new Display("Poto Violet", "vert", "Oui");
-
         list.add(Poto_Bleu);
         list.add(Poto_Violet);
         list.add(Poto_Jaune);
         list.add(Poto_Vert);
-        list.add(Poto_Rose);
-        list.add(Poto_Noir);
-        list.add(Poto_Blanc);
-        list.add(Poto_Marron);
-
         return list;
     }
 

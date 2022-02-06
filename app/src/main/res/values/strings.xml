@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PotoMeteo</string>
+    <string name="error_temp">failed to retrieve temperature</string>
 </resources>
