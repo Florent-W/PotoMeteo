@@ -12,6 +12,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/***
+ * Activité permettant de choisir sa ville au démarrage
+ */
 public class StartActivity extends AppCompatActivity {
 
     ListView mListView;
@@ -36,7 +39,7 @@ public class StartActivity extends AppCompatActivity {
                 intent.putExtra("country", c.getCountry());
                 intent.putExtra("lat", c.getLat());
                 intent.putExtra("lon", c.getLon());
-                startActivity(intent);
+                startActivity(intent); // Démarre l'application après le choix de la ville
             }
         });
     }

@@ -40,7 +40,7 @@ public class City implements Serializable {
 
     @Override
     public String toString() {
-        return this.name;
+        return this.name + " (" + this.country + ")";
     }
 }
 

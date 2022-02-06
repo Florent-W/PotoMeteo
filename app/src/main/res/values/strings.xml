@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">PotoMeteo</string>
     <string name="error_temp">failed to retrieve temperature</string>
+    <string name="image_mascotte">Image de la mascotte</string>
+    <string name="question_choix_ville"> Salut ! Je suis ton \n assistant météo. \n Tout d\'abord, \n sélectionne une ville \n pour commencer !</string>
 </resources>
