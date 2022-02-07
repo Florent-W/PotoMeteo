@@ -15,13 +15,13 @@ public class WeatherRequest {
 
     public WeatherRequest() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://api.openweathermap.org/data/2.5/")
+                .baseUrl("https://api.openweathermap.org/data/2.5/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         this.openWeatherAPI = retrofit.create(OpenWeatherAPI.class);
     }
 
-    public String get(String lat, String lon) {
+    public String getTemperature(String lat, String lon) {
         Log.d("clicked", "fetching...");
         Call<WeatherResponse> call = openWeatherAPI.getResponse(lat, lon);
         Response<WeatherResponse> response = null;
@@ -35,7 +35,7 @@ public class WeatherRequest {
             result = response.body().getMain().getTemp();
             Log.d("result", result);
         } else {
-            result = "not found";
+            result = null;
         }
         return result;
     }

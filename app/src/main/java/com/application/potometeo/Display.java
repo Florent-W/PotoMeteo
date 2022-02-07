@@ -6,40 +6,28 @@ public class Display {
 
     // Image name (Without extension)
     private String linkImg;
-    private String newClothes;
+    private String available;
 
-    public Display(String nameImg, String linkImg, String newClothes) {
+    public Display(String nameImg, String linkImg, String available) {
         this.nameImg = nameImg;
         this.linkImg = linkImg;
-        this.newClothes = newClothes;
+        this.available = available;
     }
 
     public String getClothes() {
-        return newClothes;
-    }
-
-    public void setClothes(String newClothes) {
-        this.newClothes = newClothes;
+        return available;
     }
 
     public String getNameImg() {
         return nameImg;
     }
 
-    public void setNameImg(String nameImg) {
-        this.nameImg = nameImg;
-    }
-
     public String getLinkImg() {
         return linkImg;
     }
 
-    public void setLinkImg(String linkImg) {
-        this.linkImg = linkImg;
-    }
-
     @Override
     public String toString() {
-        return this.nameImg + " (Tenu: " + this.newClothes + ")";
+        return String.format("%s[%s] - %s", this.nameImg, this.linkImg, this.available);
     }
 }

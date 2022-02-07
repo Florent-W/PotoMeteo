@@ -13,6 +13,8 @@ import java.util.List;
 
 public class InventoryActivity extends AppCompatActivity {
 
+    public static Display d = new Display("Poto Bleu", "bleu", "Disponible");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,21 +22,19 @@ public class InventoryActivity extends AppCompatActivity {
         List<Display> image_details = getListData();
         final GridView gridView = (GridView) findViewById(R.id.gridView);
         gridView.setAdapter(new CustomGridAdapter(this, image_details));
-
         // When the user clicks on the GridItem
         gridView.setOnItemClickListener((a, v, position, id) -> {
-            Object o = gridView.getItemAtPosition(position);
-            Display country = (Display) o;
-            Toast.makeText(InventoryActivity.this, "Selected :" + " " + country, Toast.LENGTH_LONG).show();
+            d = (Display) gridView.getItemAtPosition(position);
+            new DBHelper(getApplicationContext()).setPoto(d.getNameImg(), d.getLinkImg());
         });
     }
 
     private List<Display> getListData() {
         List<Display> list = new ArrayList<Display>();
-        Display Poto_Bleu = new Display("Poto Bleu", "bleu", "Oui");
-        Display Poto_Violet = new Display("Poto Violet", "violet", "Oui");
-        Display Poto_Jaune = new Display("Poto Jaune", "jaune", "Oui");
-        Display Poto_Vert = new Display("Poto Vert", "vert", "Oui");
+        Display Poto_Bleu = new Display("Poto Bleu", "bleu", "Disponible");
+        Display Poto_Violet = new Display("Poto Violet", "violet", "Disponible");
+        Display Poto_Jaune = new Display("Poto Jaune", "jaune", "Disponible");
+        Display Poto_Vert = new Display("Poto Vert", "vert", "Disponible");
         list.add(Poto_Bleu);
         list.add(Poto_Violet);
         list.add(Poto_Jaune);

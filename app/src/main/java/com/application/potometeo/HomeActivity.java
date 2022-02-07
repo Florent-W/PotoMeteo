@@ -3,49 +3,76 @@ package com.application.potometeo; /**/
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.File;
-
 public class HomeActivity extends AppCompatActivity {
-    String var;
-    String ville;
+
+    private Context context;
+    private ConstraintLayout ll;
+    private TextView tv1;
+    private TextView tv2;
+    private ImageView potoImg;
+    private String temperature;
+    private String city;
+    private String country;
+    private String lat;
+    private String lon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        var = "0";
-        ville = "Random Ville";
         Bundle extras = getIntent().getExtras();
-        if (extras != null){
-            ville = extras.getString("name");
-            ville = ville + " " + extras.getString("country");
+        context = getApplicationContext();
+        ll = findViewById(R.id.ActivityHome);
+        tv1 = findViewById(R.id.tempText);
+        tv2 = findViewById(R.id.nomVille);
+        potoImg = findViewById(R.id.potoImg);
+        if (extras != null) {
+            city = extras.getString("city");
+            country = extras.getString("country");
+            lat = extras.getString("lat");
+            lon = extras.getString("lon");
         }
+        temperature = new WeatherRequest().getTemperature(lat, lon);
+        if (temperature != null) {
+            tv1.setText(temperature + "°C");
+            tv2.setText(city + ", " + country);
+            double t = Double.parseDouble(temperature);
+            if (t < 10) {
+                ll.setBackgroundResource(R.drawable.cold);
+            } else if (t > 25) {
+                ll.setBackgroundResource(R.drawable.hot);
+            } else {
+                ll.setBackgroundResource(R.drawable.mid);
+            }
+        }
+        String imgLink = new DBHelper(context).getPotoLink();
 
-        Log.d("TAG", "onCreate: Ville = "+extras);
-        Integer.parseInt(var);
-        ConstraintLayout ll = findViewById(R.id.ActivityHome);
-        TextView tv1 = (TextView)findViewById(R.id.temptextView);
-        tv1.setText(var+"°C");
-        TextView tv2 = (TextView)findViewById(R.id.nomVille);
-        tv2.setText(ville);
+        System.out.println(imgLink);
+        if (imgLink == null) {
+            imgLink = InventoryActivity.d.getLinkImg();
+        }
+        potoImg.setImageResource(this.getDrawableResIdByName(imgLink));
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        potoImg.setImageResource(this.getDrawableResIdByName(InventoryActivity.d.getLinkImg()));
+    }
 
-        if (Integer.parseInt(var)<10){
-            ll.setBackgroundResource(R.drawable.cold);
-        }
-        else if (Integer.parseInt(var)>25){
-            ll.setBackgroundResource(R.drawable.hot);
-        }
-        else{
-            ll.setBackgroundResource(R.drawable.mid);
-        }
+    public int getDrawableResIdByName(String resName) {
+        String pkgName = context.getPackageName();
+        int resID = context.getResources().getIdentifier(resName, "drawable", pkgName);
+        Log.i("HomeActivity", "Res Name: " + resName + "==> Res ID = " + resID);
+        return resID;
     }
 
     public void ParamClicked(View view) {

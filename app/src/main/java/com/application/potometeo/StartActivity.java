@@ -23,7 +23,7 @@ public class StartActivity extends AppCompatActivity {
 
         mListView = findViewById(R.id.listView);
 
-        if(mListView.getAdapter() == null) {
+        if (mListView.getAdapter() == null) {
             ArrayAdapter<City> adapter = new ArrayAdapter<>(StartActivity.this, android.R.layout.simple_list_item_1, MainActivity.cities);
 
             mListView.setAdapter(adapter);
@@ -33,10 +33,12 @@ public class StartActivity extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                     Intent intent = new Intent(StartActivity.this, HomeActivity.class);
                     City c = (City) parent.getAdapter().getItem(position);
-                    intent.putExtra("name", c.getName());
-                    intent.putExtra("country", c.getCountry());
-                    intent.putExtra("lat", c.getLat());
-                    intent.putExtra("lon", c.getLon());
+                    String city = c.getName(), country = c.getCountry(), lat = c.getLat(), lon = c.getLon();
+                    new DBHelper(getApplicationContext()).setCity(city, country, lat, lon);
+                    intent.putExtra("city", city);
+                    intent.putExtra("country", country);
+                    intent.putExtra("lat", lat);
+                    intent.putExtra("lon", lon);
                     startActivity(intent); // Démarre l'application après le choix de la ville
                 }
             });

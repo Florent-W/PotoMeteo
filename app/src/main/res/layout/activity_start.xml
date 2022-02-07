@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
-        android:layout_marginBottom="260dp"
+        android:layout_marginBottom="300dp"
         android:contentDescription="@string/image_mascotte"
         android:shadowColor="#000000"
         android:shadowDx="1.5"
@@ -70,7 +70,7 @@
         android:layout_marginTop="300sp"
         android:alpha="1"
         android:background="@drawable/backgroundlist"
-        android:backgroundTint='#80FFFFFF'
+        android:backgroundTint="#66000000"
         android:backgroundTintMode="src_over"
         android:divider="@color/black"
         android:dividerHeight="2dp"
