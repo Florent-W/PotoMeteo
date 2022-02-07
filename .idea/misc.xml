@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ajust/AndroidStudioProjects/potometeo/app/src/main/res/layout/activity_bidon.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/ajust/AndroidStudioProjects/potometeo/app/src/main/res/layout/activity_home.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/ajust/AndroidStudioProjects/potometeo/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/ajust/AndroidStudioProjects/potometeo/app/src/main/res/layout/activity_start.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/ajust/AndroidStudioProjects/potometeo/app/src/main/res/layout/menu.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/ajust/AndroidStudioProjects/potometeo/app/src/main/res/menu/menu.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/florent.weltmann/StudioProjects/potometeo/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1805" />
