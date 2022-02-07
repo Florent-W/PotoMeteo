@@ -1,4 +1,4 @@
-package com.application.potometeo;
+package com.application.potometeo; /**/
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
