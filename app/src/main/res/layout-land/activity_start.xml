@@ -8,19 +8,18 @@
 
     <ImageView
         android:id="@+id/imageBackground"
-        android:layout_width="799dp"
-        android:layout_height="396dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="21dp"
+        android:layout_width="735dp"
+        android:layout_height="506dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginBottom="132dp"
         android:alpha="0.8"
+        android:contentDescription="@string/image_background_description"
         android:cropToPadding="true"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.374"
         app:srcCompat="@drawable/backgroundstart"
         tools:ignore="ImageContrastCheck" />
 
@@ -28,8 +27,7 @@
         android:id="@+id/imageMascotte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginBottom="260dp"
+        android:layout_marginStart="24dp"
         android:contentDescription="@string/image_mascotte"
         android:shadowColor="#000000"
         android:shadowDx="1.5"
@@ -37,37 +35,39 @@
         android:shadowRadius="1.6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/bleu" />
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintStart_toStartOf="@+id/imageBackground"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/bleu"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/textViewChoixVille"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="96dp"
-        android:contentDescription="@string/question_choix_ville"
         android:shadowColor="#000000"
         android:shadowDx="5.5"
         android:shadowDy="5.3"
         android:shadowRadius="5.6"
         android:text="@string/question_choix_ville"
         android:textAlignment="center"
-        android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@android:color/holo_orange_light"
-        android:textSize="18sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageMascotte"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="@+id/imageMascotte"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.376" />
 
     <ListView
         android:id="@+id/listView"
         style="@style/Widget.AppCompat.Light.ListView.DropDown"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300sp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:alpha="1"
         android:background="@drawable/backgroundlist"
         android:backgroundTint='#80FFFFFF'
@@ -78,12 +78,10 @@
         android:fastScrollEnabled="true"
         android:textFilterEnabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight="match_parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/imageBackground"
+        app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageBackground"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

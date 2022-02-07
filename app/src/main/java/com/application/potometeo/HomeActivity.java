@@ -47,16 +47,14 @@ public class HomeActivity extends AppCompatActivity {
             ll.setBackgroundResource(R.drawable.mid);
         }
     }
+
     public void ParamClicked(View view) {
-
-        Intent intent1 = new Intent(this, Bidon.class);
+        Intent intent1 = new Intent(this, SettingsActivity.class);
         startActivity(intent1);
-
     }
+
     public void InventoryClicked(View view) {
-
-        Intent intent2 = new Intent(this, Bidon.class);
+        Intent intent2 = new Intent(this, InventoryActivity.class);
         startActivity(intent2);
-
     }
 }
