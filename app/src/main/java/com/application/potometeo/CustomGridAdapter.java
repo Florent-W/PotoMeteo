@@ -58,6 +58,7 @@ public class CustomGridAdapter extends BaseAdapter {
         int imageId = this.getDrawableResIdByName(display.getLinkImg());
 
         holder.displayImg.setImageResource(imageId);
+        holder.displayImg.setContentDescription("choisir une " + display.getNameImg());
 
         return convertView;
     }

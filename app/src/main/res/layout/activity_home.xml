@@ -8,11 +8,12 @@
     tools:context=".HomeActivity">
 
     <Button
-        android:id="@+id/iventory"
+        android:id="@+id/inventory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:contentDescription="Inventaire"
+        android:elevation="1dp"
         android:onClick="InventoryClicked"
         android:text="Inventaire"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,6 +27,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/autre_ville"
+        android:elevation="1dp"
         android:onClick="OtherCityClicked"
         android:text="@string/autre_ville"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,6 +40,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:contentDescription="Paramètres"
+        android:elevation="1dp"
         android:onClick="ParamClicked"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,11 +51,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:elevation="1dp"
         android:shadowColor="@color/black"
         android:shadowDx="10"
         android:shadowDy="10"
         android:shadowRadius="3"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
         android:textSize="60sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nomVille" />
@@ -63,6 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:elevation="1dp"
         android:shadowColor="@color/black"
         android:shadowDx="10"
         android:shadowDy="10"
@@ -76,14 +82,14 @@
 
     <ImageView
         android:id="@+id/potoImg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleX="2.2"
-        android:scaleY="2.2"
+        android:layout_width="411dp"
+        android:layout_height="411dp"
+        android:scaleX="1.7"
+        android:scaleY="1.7"
         app:layout_constraintBottom_toTopOf="@+id/param"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nomVille"
         app:srcCompat="@drawable/bleu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

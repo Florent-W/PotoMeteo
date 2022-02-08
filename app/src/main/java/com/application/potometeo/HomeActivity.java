@@ -47,25 +47,32 @@ public class HomeActivity extends AppCompatActivity {
             double t = Double.parseDouble(temperature);
             if (t < 10) {
                 ll.setBackgroundResource(R.drawable.cold);
+                ll.setContentDescription("un forêt enneigé");
             } else if (t > 25) {
                 ll.setBackgroundResource(R.drawable.hot);
+                ll.setContentDescription("un thermomètre géant");
             } else {
                 ll.setBackgroundResource(R.drawable.mid);
+                ll.setContentDescription("un beau ciel bleu parsemé de nuages");
             }
         }
         String imgLink = new DBHelper(context).getPotoLink();
-
-        System.out.println(imgLink);
+        String imgName = new DBHelper(context).getPotoImg();
         if (imgLink == null) {
             imgLink = InventoryActivity.d.getLinkImg();
         }
+        if (imgName == null) {
+            imgName = InventoryActivity.d.getNameImg();
+        }
         potoImg.setImageResource(this.getDrawableResIdByName(imgLink));
+        potoImg.setContentDescription("la mascotte poto porte une " + imgName);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         potoImg.setImageResource(this.getDrawableResIdByName(InventoryActivity.d.getLinkImg()));
+        potoImg.setContentDescription("la mascotte poto porte une " + InventoryActivity.d.getNameImg());
     }
 
     public int getDrawableResIdByName(String resName) {

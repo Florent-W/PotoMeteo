@@ -31,10 +31,10 @@ public class InventoryActivity extends AppCompatActivity {
 
     private List<Display> getListData() {
         List<Display> list = new ArrayList<Display>();
-        Display Poto_Bleu = new Display("Poto Bleu", "bleu", "Disponible");
-        Display Poto_Violet = new Display("Poto Violet", "violet", "Disponible");
-        Display Poto_Jaune = new Display("Poto Jaune", "jaune", "Disponible");
-        Display Poto_Vert = new Display("Poto Vert", "vert", "Disponible");
+        Display Poto_Bleu = new Display("chemise bleue", "bleu", "Obtenu");
+        Display Poto_Violet = new Display("chemise violette", "violet", "Obtenu");
+        Display Poto_Jaune = new Display("chemise jaune", "jaune", "Obtenu");
+        Display Poto_Vert = new Display("chemise verte", "vert", "Obtenu");
         list.add(Poto_Bleu);
         list.add(Poto_Violet);
         list.add(Poto_Jaune);
