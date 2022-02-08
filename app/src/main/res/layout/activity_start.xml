@@ -67,7 +67,7 @@
         android:layout_marginTop="300sp"
         android:alpha="1"
         android:background="@drawable/backgroundlist"
-        android:backgroundTint="#80FFFFFF"
+        android:backgroundTint="#33000000"
         android:backgroundTintMode="src_over"
         android:divider="@color/black"
         android:dividerHeight="2dp"
