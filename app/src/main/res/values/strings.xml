@@ -3,5 +3,7 @@
     <string name="error_temp">failed to retrieve temperature</string>
     <string name="image_mascotte">Image de la mascotte</string>
     <string name="image_background_description">Image de fond, une plage est visible</string>
+    <string name="bouton_autre_ville_description">Bouton pour choisir une autre ville</string>
     <string name="question_choix_ville"> Bonjour ! Je suis ton \n assistant météo. \n Sélectionne une ville \n pour commencer !</string>
+    <string name="autre_ville">Villes</string>
 </resources>

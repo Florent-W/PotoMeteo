@@ -84,4 +84,9 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent2 = new Intent(this, InventoryActivity.class);
         startActivity(intent2);
     }
+
+    public void OtherCityClicked(View view) {
+        Intent intent3 = new Intent(this, StartActivity.class);
+        startActivity(intent3);
+    }
 }
